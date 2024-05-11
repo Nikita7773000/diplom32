@@ -26,7 +26,7 @@ class Grade(models.Model):
     book = models.CharField('Название задачи№', max_length=50)
     grade = models.CharField('Задача', max_length=50)
     text = models.TextField('Описание')
-
+    is_visible = models.BooleanField(default=False)
 
 
 

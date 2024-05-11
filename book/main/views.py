@@ -17,18 +17,24 @@ def my_view(request):
 grade = Grade()
 
 
+from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
+from .forms import GradeForm
+from .models import Grade
+
 @login_required
 def grade_list(request):
-    grade = Grade.objects.all()
     if request.method == 'POST':
-        form = GradeForm(request.POST)  # Загрузка данных в форму
+        form = GradeForm(request.POST)
         if form.is_valid():
-            products = form.cleaned_data['product']
-            for product in products:
-                product.is_visible = True
-                product.save()
-            return redirect('grade_list')  # Перенаправление для предотвращения повторной отправки формы
-    return render(request, 'grade-list.html', {'grade': grade})
+            selected_grades = form.cleaned_data['product']
+            Grade.objects.all().update(is_visible=False)  # Сбросить все
+            selected_grades.update(is_visible=True)  # Обновить выбранные
+            return redirect('grade_list')
+    else:
+        form = GradeForm()
+    grades = Grade.objects.all()
+    return render(request, 'grade-list.html', {'grades': grades, 'form': form})
 
 
 class MyDetailView1(DetailView):
