@@ -43,17 +43,20 @@ class MyDetailView1(DetailView):
     context_object_name = 'book'
 
 
+
 @login_required
 def grade(request):
     if request.method == 'POST':
         form = GradeForm(request.POST)
         if form.is_valid():
-            form.save()
-            return redirect('list-book')
+            selected_grades = form.cleaned_data['product']
+            Grade.objects.all().update(is_visible=False)  # Сбросить все
+            selected_grades.update(is_visible=True)  # Обновить выбранные
+            return redirect('grade_list')
     else:
-        form = GradeForm()
-    return render(request, 'grade.html', {'form': form})
-
+        form = Grade()
+    grades = Grade.objects.all()
+    return render(request, 'grade.html', {'grades': grades, 'form': form})
 def author(request):
      authors = Author.objects.all()
      return render(request, 'author.html', {'authors': authors})
