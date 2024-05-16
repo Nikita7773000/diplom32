@@ -8,12 +8,13 @@
 .form {
   position: relative;
   z-index: 1;
-  background: #FFFFFF;
+
+  background: linear-gradient(90deg, rgba(518,184,82,1) 0%, rgba(2,194,111,1) 70%);
   max-width: 390px;
   margin: 0 auto 100px;
   padding: 45px;
   text-align: center;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  box-shadow: 0 0 20px 12 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 .form input {
   font-family: "Roboto", sans-serif;
@@ -82,16 +83,16 @@
   font-size: 12px;
 }
 .container .info span a {
-  color: #000000;
+  color:#ff0000;
   text-decoration: none;
 }
 .container .info span .fa {
-  color: #EF3B3A;
+  color: #ff0000;
 }
 body {
 
   background-color: rgb(241,294,411);
-  background: linear-gradient(90deg, rgba(241,194,111,1) 0%, rgba(218,184,82,1) 50%);
+  background: linear-gradient(90deg, rgba(2,194,111,1) 0%, rgba(518,184,82,1) 50%);
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
