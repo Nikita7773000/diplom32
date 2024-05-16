@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Raleway&display=swap');@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+
+body {  background-color: #77C4C4;
+  font-family: "Lato" ;  font-weight: 300;
+  font-size: 16px;  color: #555;
+  -webkit-font-soothing: antialiased;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 70px;
+}
+h2,h4,h5,h6{  font-family: "Lato";
+  font-weight: 300;  color:#333;
+}
+h3{  font-family: 'Ramabhadra', sans-serif;
+  font-weight: 400;
+}
+h1{  font-family: 'Oswald', sans-serif;
+  font-weight: 500;  color:#333;
+}
+p{
+  line-height: 28px;  margin-bottom: 25px;
+}
+.centered{  text-align: center;
+}
+a{
+  font-family: "Oswald";  font-size: 30px;
+}
+a:hover , a:focus{
+  color:#7b7b7b;  text-decoration: none;
+  outline: 0;
+}
+hr {
+  height: 1px;
+  border: 0;  border-top:1px solid #ccc;
+  margin: 1em 0;  padding:0;
+}
+li {
+  margin-top:60px;  margin-left: 10px;
+}
+.li:active, .li:hover{  background-color: #ff7878 ;
+}
+
+
+.navbar{  margin-top: -80px;
+  font-weight:800;
+  font-size:14px;  padding-top:15px;
+  padding-bottom: 15px;}
+.navbar-inverse{
+  background:#005367;  border-color: #2d2d2d;
+}
+
+.navbar-inverse .navbar-brand{  color: #999 ;
+  font-weight: bolder;  font-size: 22px;
+  letter-spacing: 1px;}
+#headrwrap{
+  margin: 300px ;
+}
+#Buttons{
+  margin-left: 100px}
+.form-control{
+  background-color: #fff;  border: 1px solid #ccc;
+  border-radius:4px;  box-shadow: 0 1px 1px rgba(0,0,0,0.075) inset;
+  color: #555 ;  display: block;
+  font-size: 14px;  height: 34px;
+  line-height: 1.42857;  padding: 6px 12px;
+  width: 50%;  margin-top: 20px;
+  margin-left: 25%;}
+#Entered{
+  height: 500px;}
+#EnterButton{
+  margin-top: 50px;
+  margin-left: 250px;}
+
+#enterVK{  margin-left: 160px;
+}
+#ForgetPasswords{  margin-left:240px;
+}
+#ForgetPasswords:hover{
+  color: #DE4E5F;  text-decoration:underline;
+}
+#containerEMail{
+  margin-left: 25%;
+}
+.EnterText{  margin-left: 150px;
+}
+.close{  margin-right: 10px;
+  margin-top: 10px;}
+#RegisterButton{
+  margin-left: 180px;  margin-top: 30px;
+}
+#H1changeColor{    color:white;
+}
+#next-block{  width: 300px;
+  height: 60px;
+  background:#f1f1f1;  float:left;
+  margin-left: 400px;
+  padding-top:10px  text-align:center;
+}

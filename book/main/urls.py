@@ -6,6 +6,7 @@ from django.urls import path
 urlpatterns = [path('', views.main,name='main'),
                path('list/', views.my_view, name="list-book"),
                path('grade', views.grade, name='grade'),
+               path('grade1/', views.grade1, name='grade1'),
                path('author', views.author, name='author'),
                path('grade_list', views.grade_list, name='grade_list'),
                path('registr/', views.registr, name='registr'),

@@ -2,7 +2,7 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from django.views.generic import DetailView
 from .models import Book, Grade, Author
-from .forms import GradeForm, RegisterForm
+from .forms import GradeForm, RegisterForm, BookForm
 
 
 def main(request):
@@ -47,11 +47,11 @@ class MyDetailView1(DetailView):
 @login_required
 def grade(request):
     if request.method == 'POST':
-        form = GradeForm(request.POST)
+        form = BookForm(request.POST)
         if form.is_valid():
-            selected_grades = form.cleaned_data['product']
+
             Grade.objects.all().update(is_visible=False)  # Сбросить все
-            selected_grades.update(is_visible=True)  # Обновить выбранные
+
             return redirect('grade_list')
     else:
         form = Grade()
@@ -71,3 +71,14 @@ def registr(request):
     else:
         form = RegisterForm()
     return render(request, 'registration/registr.html', {'form': form})
+
+
+def grade1(request):
+    if request.method == 'POST':
+        form = BookForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('grade_list')
+    else:
+        form = BookForm()
+    return render(request, 'grade.html', {'form': form})
