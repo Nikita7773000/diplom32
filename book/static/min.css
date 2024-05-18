@@ -1,0 +1,27 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+.login-page {
+  width: 390px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+.for {
+  position: relative;
+  z-index: 1;
+
+  background: linear-gradient(90deg, rgba(518,184,82,1) 0%, rgba(2,194,111,1) 70%);
+  max-width: 427px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 12 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+body {
+
+  background-color: rgb(241,294,411);
+  background: linear-gradient(90deg, rgba(2,194,111,1) 0%, rgba(518,184,82,1) 50%);
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

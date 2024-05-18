@@ -1,0 +1,23 @@
+{% extends "ShapeHtml/grade-list.html" %}
+
+{% block content %}
+
+    {% for product in object_list  %}
+
+
+      <div id="next-block">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                  <p><img src="{{ MEDIA_URL }}{{ product.img.url }}"/></p>
+              </div>
+              <div class="panel-body">
+                  <a href="/shop/{{product.id}}"> <h1> {{product.title}} </h1> </a>
+                  <h3 align="right">{{products.date|date:"d-m-Y"}}</h3>
+              </div>
+            </div>
+        </div>
+      </div>
+
+    {% endfor %}
+
+{% endblock %}
