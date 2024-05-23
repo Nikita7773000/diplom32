@@ -9,7 +9,9 @@
   position: relative;
   z-index: 1;
 
-  background: linear-gradient(90deg, rgba(518,184,82,1) 0%, rgba(2,194,111,1) 70%);
+ background-color: green;
+  background: #32383F;
+  color: #F5E2CD;
   max-width: 390px;
   margin: 0 auto 100px;
   padding: 45px;
@@ -19,7 +21,7 @@
 .form input {
   font-family: "Roboto", sans-serif;
   outline: 0;
-  background: #f2f2f2;
+  background: grey;
   width: 100%;
   border: 0;
   margin: 0 0 15px;
@@ -42,7 +44,7 @@
   cursor: pointer;
 }
 .form button:hover,.form button:active,.form button:focus {
-  background: #43A047;
+  background: red;
 }
 .form .message {
   margin: 15px 0 0;
@@ -87,12 +89,11 @@
   text-decoration: none;
 }
 .container .info span .fa {
-  color: #ff0000;
+  color: red;
 }
 body {
 
-  background-color: rgb(241,294,411);
-  background: linear-gradient(90deg, rgba(2,194,111,1) 0%, rgba(518,184,82,1) 50%);
+  background-color: #39383F;
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

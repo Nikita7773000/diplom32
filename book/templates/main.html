@@ -4,95 +4,278 @@
 <link rel="stylesheet" href="{% static 'main.css' %}">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-<head>
-    <meta charset="UTF-8">
-    <title>Главная</title>
-</head>
+
+
+
+
 <body>
+   <div class="top-panel"><a href="https://html5book.ru/krasivoe-oformlenie-blokov-na-sayte/">Назад к уроку</a></div>
+   <div class="container">
 
-<div style="position:relative; margin:0px auto -20px auto; min-width:1100px; height:165px; border: 0px solid red; font-family: 'Playfair Display', serif; text-align:center; background-color:#181818;">
-
-    <a title="HTMLBOSS"
-       style="color:white; text-decoration:none; font-size:40px; position:relative; top:44px; font-weight:400;">HTMLBOSS</a><a
-        title="HTMLBOSS"
-        style="color:white; text-decoration:none; font-size:28px; position:relative; top:44px; font-weight:400;">.ru</a>
-    <br>
-    <font style="color:#8C8989; font-family: 'Open Sans', sans-serif; font-size:12px; position:relative; top:37px; font-weight:300;">online
-        школа html верстки для начинающих</font>
+         <h1>Дизайн страницы в темных тонах:<br><span>анимация внутри блока</span></h1>
 
 
-</div>
-<nav>
-    <div style="position:relative; top:-10px; min-width:1100px; height:41px; background-color:#E80000; border:0px solid red;">
-
-
-        <p class="d-inline-flex gap-1">
-            <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button"
-               aria-expanded="false" aria-controls="collapseExample">
-                свединия
-            </a>
-            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExampl"
-                    aria-expanded="false" aria-controls="collapseExampl">
-                сдесь можно добавлять задачи
-            </button>
-        </p>
-        <div class="collapse" id="collapseExample">
-            <div class="card card-body">
-                сдесь можно добавлять задачи
+      <div class="post-wrap">
+         <div class="post-item">
+            <div class="item-content">
+               <div class="item-icon group"></div>
+               <div class="item-body">
+                  <h3>Калективные задачи</h3>
+                  <p>задесь вы выпалняете задачи группой.</p>
+               </div>
+               <div class="item-footer">
+                  <a href="{% url 'list-book' %}" class="link"><span>Подробнее</span></a>
+               </div>
             </div>
-        </div>
-        <div class="collapse" id="collapseExampl">
-            <div class="card card-body">
-                сдесь можно добавлять задачисссссс
+         </div>
+         <div class="post-item">
+            <div class="item-content">
+               <div class="item-icon tree"></div>
+               <div class="item-body">
+                  <h3> добавить задачу</h3>
+                  <p>Ты можешь добавить задачу для всех.</p>
+               </div>
+               <div class="item-footer">
+                  <a href="{% url 'grade' %}" class="link"><span>Подробнее</span></a>
+               </div>
             </div>
-        </div>
+         </div>
+         <div class="post-item">
+            <div class="item-content">
+               <div class="item-icon anchor"></div>
+               <div class="item-body">
+                  <h3>Задачи каторые уже добавлены</h3>
+                  <p>здесь иожно просмотреть свои задачи като вы добавили.</p>
+               </div>
+               <div class="item-footer">
+                  <a href="{% url 'grade_list' %}" class="link"><span>Подробнее</span></a>
+               </div>
+            </div>
+         </div>
+         <div class="post-item">
+            <div class="item-content">
 
-        <ul class="nav nav-tabs">
+               <div class="item-body">
+                  <h3>Регистрацыя</h3>
+                  <p>зарегистрируйтесь для действий на этом сайте.</p>
+               </div>
+               <div class="item-footer">
+                  <a href="{%url 'registr' %}" class="link"><span>Подробнее</span></a>
+               </div>
+            </div>
+         </div>
+         <div class="post-item">
+            <div class="item-content">
 
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{% url 'list-book' %}">задачи</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'author' %}">Авторы задач</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'grade_list' %}">обшие задачи</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'grade' %}">Оценить задачи</a>
-            </li>
-        </ul>
-    </div>
-</nav>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-<h5>
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{% url 'list-book' %}">задачи</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'author' %}">Авторы задач</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'grade_list' %}">обшие задачи</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'grade' %}">Оценить задачи</a>
-            </li></h5>
-    </ul>
-</nav>
-<div class="row jstify-content-around">
-    <div class="col-4">
+               <div class="item-body">
+                  <h3>быстрый вход</h3>
+                  <p>Возспользуйтесь быстрый вход при том если вы уже зарегистрированы .</p>
+               </div>
+               <div class="item-footer">
+                  <a href="{% url 'login' %}" class="link"><span>Подробнее</span></a>
+               </div>
+            </div>
+         </div>
+         <div class="post-item">
+            <div class="item-content">
+               <div class="cart-circle-plus"></div>
+               <div class="item-body">
+                  <h3>Авторы задач</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla feugiat a quam non blandit.</p>
+               </div>
+               <div class="item-footer">
+                  <a href="{% url 'author' %}" class="link"><span>Подробнее</span></a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
 
 
-    </div>
-    <div class="col-4">
+</body></html>
+        <head>
+   <title>Дизайн страницы в темных тонах - анимация внутри блоков</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="">
+   <meta name="author" content="HTML5BOOK">
+   <link rel="shortcut icon" href="/favicon.ico">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+   <link rel="stylesheet" type="text/css" href="single.css">
+   <style>
+      * {
+         margin: 0;
+         box-sizing: border-box;
+      }
 
-    </div>
-</div>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-</body>
-</html>
+      body {
+         background: #39383F;
+         font-family: 'Montserrat Alternates', sans-serif;
+      }
+
+      .top-panel a {
+         color: #F09EA3;
+      }
+
+      header h1,
+      nav a {
+         color: #F5E2CD;
+      }
+
+      nav a:before,
+      nav a:after {
+         color: rgba(255, 255, 255, .3);
+      }
+
+      .post-wrap {
+         max-width: 1120px;
+         margin: 0 auto;
+         display: flex;
+         justify-content: center;
+         flex-wrap: wrap;
+      }
+
+      .post-item {
+         padding: 15px;
+         cursor: pointer;
+      }
+
+      .post-item * {
+         transition: .3s linear;
+      }
+
+      .item-content {
+         background: #413D4C;
+         padding: 40px;
+      }
+
+      .item-icon {
+         margin-bottom: 20px;
+      }
+
+      .item-icon:before {
+         content: "";
+         font-family: FontAwesome;
+         color: #F09EA3;
+         font-size: 50px;
+         line-height: 1;
+      }
+
+      .item-icon.photo:before {
+         content: "\f030";
+      }
+
+      .item-icon.video:before {
+         content: "\f03d";
+      }
+
+      .item-icon.gift:before {
+         content: "\f06b";
+      }
+
+      .item-icon.group:before {
+         content: "\f0c0";
+      }
+
+      .item-icon.tree:before {
+         content: "\f1bb";
+      }
+
+      .item-icon.anchor:before {
+         content: "\f13d";
+      }
+
+      .post-item:hover .item-icon,
+      .post-item:hover .item-body h3,
+      .post-item:hover .item-body p {
+         transform: translateY(-8px);
+      }
+
+      .item-body {
+         color: #F5E2CD;
+         font-size: 14px;
+      }
+
+      .item-body h3 {
+         font-weight: 500;
+         margin-bottom: 15px;
+         transition-delay: .05s;
+      }
+
+      .item-body p {
+         transition-delay: .1s;
+      }
+
+      .item-footer {
+         padding-top: 15px;
+      }
+
+      .link {
+         text-decoration: none;
+         display: inline-block;
+         overflow: hidden;
+         position: relative;
+         padding-right: 30px;
+         font-size: 12px;
+         text-transform: uppercase;
+         font-weight: 600;
+         color: #F5E2CD;
+      }
+
+      .link:before {
+         content: "";
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         bottom: 0;
+         height: .125rem;
+         margin: auto;
+         background: #F09EA3;
+         transform: scaleX(.2);
+         transform-origin: left center;
+         z-index: 0;
+         transition: .6s cubic-bezier(.6, .01, 0, 1);
+      }
+
+      .link span {
+         display: inline-block;
+         position: relative;
+         transform: translateX(-200%);
+         transition: .6s cubic-bezier(.6, .01, 0, 1);
+      }
+
+      .post-item:hover .link span {
+         transform: translateX(0%);
+      }
+
+      .post-item:hover .link:before {
+         transform-origin: right center;
+      }
+
+      @media (min-width: 768px) {
+         .post-item {
+            flex-basis: 50%;
+            flex-shrink: 0;
+         }
+      }
+
+      @media (min-width: 960px) {
+         .post-item {
+            flex-basis: 33.333333333%;
+         }
+      }
+   </style>
+
+
+
+
+        <br>
+        <br>
+        <br>
+        <br><br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
